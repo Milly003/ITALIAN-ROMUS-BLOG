@@ -1,9 +1,8 @@
-/* ======= BANNER HOME ======= */
 .banner-home {
   position: relative;
   width: 100%;
   height: 70vh;
-  background: url("/imagens/italia.vista.home.webp") center/cover no-repeat; 
+  background: url("./imagens/italia.vista.home.webp") center/cover no-repeat; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +31,6 @@
   display: inline-block;
 }
 
-/* ======= CONTEÚDO PRINCIPAL ======= */
 main {
   padding: 40px 10%;
 }
@@ -157,4 +155,5 @@ section {
 
 .opcoes {
   align-items: stretch;
+
 }
