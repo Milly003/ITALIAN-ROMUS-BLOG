@@ -1,0 +1,82 @@
+/* ======= SOBRE ======= */
+.sobre-inicio {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ======= TOPO (Títulos + Imagem direita) ======= */
+.sobre-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* alinha topo do texto com topo da imagem */
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* permite quebra em telas pequenas */
+}
+
+.sobre-titulos {
+  flex: 1; /* ocupa todo espaço disponível para o texto */
+  min-width: 250px; /* garante largura mínima do texto */
+}
+
+.sobre-titulos h2:first-of-type {
+  font-family: "Cinzel", serif;
+  font-size: 36px;
+  color: #3b2f2f;
+  margin-bottom: 10px;
+}
+
+.sobre-titulos h2:last-of-type {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #3b2f2f;
+  margin-bottom: 0;
+}
+
+.sobre-imagem-direita {
+  flex-shrink: 0; /* impede a imagem de encolher demais */
+}
+
+.sobre-imagem-direita img {
+  width: 250px; /* largura fixa da imagem */
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ======= CONTEÚDO (parágrafo + imagem abaixo) ======= */
+.sobre-conteudo p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #3b2f2f;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.sobre-imagem-baixo img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: block;
+  margin: 20px auto 0;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 768px) {
+  .sobre-topo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-imagem-direita img {
+    width: 100%;
+    max-width: 350px; /* reduz em telas pequenas */
+    margin-top: 20px;
+  }
+}
