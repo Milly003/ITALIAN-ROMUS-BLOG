@@ -41,7 +41,6 @@ section {
   margin-bottom: 50px;
 }
 
-/* ======= DESTAQUES ======= */
 .destaques h3 {
   text-align: center;
   font-size: 28px;
@@ -50,8 +49,6 @@ section {
   font-family: "Cinzel", serif;
 }
 
-
-/* ======= CARDS ======= */
 .opcoes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

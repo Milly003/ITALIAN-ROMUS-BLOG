@@ -1,23 +1,21 @@
-/* ======= SOBRE ======= */
 .sobre-inicio {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-/* ======= TOPO (Títulos + Imagem direita) ======= */
 .sobre-topo {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* alinha topo do texto com topo da imagem */
+  align-items: flex-start;
   gap: 30px;
   margin-bottom: 30px;
-  flex-wrap: wrap; /* permite quebra em telas pequenas */
+  flex-wrap: wrap; 
 }
 
 .sobre-titulos {
-  flex: 1; /* ocupa todo espaço disponível para o texto */
-  min-width: 250px; /* garante largura mínima do texto */
+  flex: 1; 
+  min-width: 250px; 
 }
 
 .sobre-titulos h2:first-of-type {
@@ -36,18 +34,17 @@
 }
 
 .sobre-imagem-direita {
-  flex-shrink: 0; /* impede a imagem de encolher demais */
+  flex-shrink: 0; 
 }
 
 .sobre-imagem-direita img {
-  width: 250px; /* largura fixa da imagem */
+  width: 250px; 
   max-width: 100%;
   height: auto;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* ======= CONTEÚDO (parágrafo + imagem abaixo) ======= */
 .sobre-conteudo p {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
@@ -66,7 +63,6 @@
   margin: 20px auto 0;
 }
 
-/* ======= CARROSSEL DE IMAGENS ======= */
 .carousel {
   position: relative;
   width: 100%;
@@ -89,11 +85,10 @@
   transition: opacity 1s ease-in-out;
 }
 
-/* imagem visível */
 .carousel img.active {
   opacity: 1;
 }
-/* ======= RESPONSIVIDADE ======= */
+
 @media (max-width: 768px) {
   .sobre-topo {
     flex-direction: column;
@@ -103,7 +98,7 @@
 
   .sobre-imagem-direita img {
     width: 100%;
-    max-width: 350px; /* reduz em telas pequenas */
+    max-width: 350px; 
     margin-top: 20px;
   }
 }

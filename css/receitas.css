@@ -1,18 +1,17 @@
-/* ======= CARDÁPIO ======= */
-.inicio-cardapio {
+.inicio-receitas {
   text-align: center;
   padding: 60px 20px;
   background-color: #fff7e6;
   font-family: "Cinzel", serif;
 }
 
-.inicio-cardapio h2 {
+.inicio-receitas h2 {
   color: #3b2f2f;
   font-size: 36px;
   margin-bottom: 10px;
 }
 
-.inicio-cardapio::after {
+.inicio-receitas::after {
   content: "";
   display: block;
   width: 100px;
@@ -22,7 +21,6 @@
   border-radius: 2px;
 }
 
-/* ======= CATEGORIAS ======= */
 .categoria1,
 .categoria2 {
   margin-bottom: 60px;
@@ -41,7 +39,6 @@
   margin-top: 40px;
 }
 
-/* ======= GRADE ======= */
 .pratos,
 .sobremesa {
   display: grid;
@@ -50,7 +47,6 @@
   justify-content: center;
 }
 
-/* ======= CARDS ======= */
 .pratos_massa,
 .pratos_peixe,
 .pratos_pizza,
@@ -80,7 +76,6 @@
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
-/* ======= IMAGENS ======= */
 .pratos_massa img,
 .pratos_peixe img,
 .pratos_pizza img,
@@ -95,7 +90,6 @@
   flex-shrink: 0;
 }
 
-/* ======= TEXTOS ======= */
 .pratos_massa div,
 .pratos_peixe div,
 .pratos_pizza div,
@@ -132,7 +126,6 @@
   line-height: 1.5;
 }
 
-/* ======= BOTÃO DOS PRATOS ======= */
 .botao-prato {
   display: inline-block;
   background-color: #3b2f2f;   
@@ -153,7 +146,6 @@
   color: #3b2f2f;
 }
 
-/* ======= RESPONSIVIDADE ======= */
 @media (max-width: 768px) {
   .pratos_massa,
   .pratos_peixe,
