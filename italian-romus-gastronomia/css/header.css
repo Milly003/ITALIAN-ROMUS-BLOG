@@ -1,0 +1,51 @@
+/* ======= RESET BÁSICO ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fffaf3;
+  color: #3b2f2f;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #3b2f2f;
+  color: #f5deb3;
+  padding: 20px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-family: "Cinzel", serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #f0d28c;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f5deb3;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #f0d28c;
+  color: #3b2f2f;
+}
