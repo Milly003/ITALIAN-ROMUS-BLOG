@@ -1,16 +1,16 @@
 
 // Carrega header.html
-fetch("/components/header.html")
+fetch("components/header.html")
     .then(response => response.text())
     .then(data => document.getElementById("header").innerHTML = data);
 
 // Carrega footer.html
-fetch("/components/footer.html")
+fetch("components/footer.html")
     .then(response => response.text())
     .then(data => document.getElementById("footer").innerHTML = data);
 
 // carrega o imagens.html
-fetch("/components/imagens.html")
+fetch("components/imagens.html")
     .then(response => response.text())
     .then(data => document.body.insertAdjacentHTML("beforeend", data));
 
@@ -32,3 +32,4 @@ window.addEventListener("DOMContentLoaded", () => {
   carregarPagina("home.html");
 
 });
+
