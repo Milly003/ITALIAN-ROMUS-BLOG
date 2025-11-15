@@ -16,7 +16,7 @@ fetch("components/imagens.html")
 
 // ===== Função para carregar páginas =====
 function carregarPagina(pagina) {
-  fetch(`/pages/${pagina}`)
+  fetch(`pages/${pagina}`)
     .then(res => {
       if (!res.ok) throw new Error(`Erro ao carregar ${pagina}`);
       return res.text();
@@ -32,4 +32,5 @@ window.addEventListener("DOMContentLoaded", () => {
   carregarPagina("home.html");
 
 });
+
 
