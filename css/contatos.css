@@ -1,4 +1,4 @@
-/* ======= SEÇÃO CONTATOS ======= */
+/* ======= CONTATOS ======= */
 .contatos-inicio {
   max-width: 1000px;
   margin: 40px auto;
@@ -13,25 +13,24 @@
   margin-bottom: 40px;
 }
 
-/* ======= GRID DE CONTATOS ======= */
+/* ======= GRID ======= */
 .contato-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
 }
 
 /* ======= CARTÕES ======= */
 .contato-info,
-.contato-reserva,
 .contato-mensagem {
   background-color: #fff7e6;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 
 .contato-info h3,
-.contato-reserva h3,
 .contato-mensagem h3 {
   font-family: "Cinzel", serif;
   font-size: 22px;
@@ -39,7 +38,31 @@
   margin-bottom: 15px;
 }
 
+.contato-info p {
+  font-family: "Poppins", sans-serif;
+  color: #3b2f2f;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  
+}
+
+.contato-info a {
+  color: #9b5f2f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contato-info a:hover {
+  text-decoration: underline;
+}
+
 /* ======= FORMULÁRIO ======= */
+.contato-mensagem form {
+  display: flex;
+  flex-direction: column;
+}
+
 .contato-mensagem input,
 .contato-mensagem textarea {
   width: 100%;
@@ -49,30 +72,30 @@
   border-radius: 6px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+  background-color: #ffffff;
 }
 
 .contato-mensagem textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 120px;
 }
 
 /* ======= BOTÃO ======= */
-.contato-mensagem button,
-.contato-reserva .botao {
+.contato-mensagem button {
   display: inline-block;
   background-color: #3b2f2f;
   color: #f0d28c;
-  padding: 10px 20px;
+  padding: 12px 22px;
   border-radius: 6px;
   font-weight: 500;
   text-decoration: none;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 16px;
 }
 
-.contato-mensagem button:hover,
-.contato-reserva .botao:hover {
+.contato-mensagem button:hover {
   background-color: #f0d28c;
   color: #3b2f2f;
 }

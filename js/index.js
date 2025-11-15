@@ -1,7 +1,5 @@
-// index.js - versão recomendada
 window.addEventListener("DOMContentLoaded", () => {
-
-  // Helper para carregar um componente e inserir no elemento alvo
+  let carouselInterval = null;
   const carregarComponente = (caminho, seletor, inserirComoHTML = false) => {
     fetch(caminho)
       .then(res => {
@@ -19,13 +17,9 @@ window.addEventListener("DOMContentLoaded", () => {
       })
       .catch(err => console.error(err));
   };
-
-  // Carrega header e footer (componentes)
   carregarComponente("./components/header.html", "#header");
   carregarComponente("./components/footer.html", "#footer");
 
-  // Carrega imagens.html e insere no container #imagens-container (se existir),
-  // caso contrário anexa ao final do body
   fetch("./components/imagens.html")
     .then(res => {
       if (!res.ok) throw new Error("Erro ao carregar imagens.html");
@@ -35,10 +29,10 @@ window.addEventListener("DOMContentLoaded", () => {
       const imagensContainer = document.getElementById("imagens-container");
       if (imagensContainer) imagensContainer.innerHTML = data;
       else document.body.insertAdjacentHTML("beforeend", data);
+
+      initCarousel();
     })
     .catch(err => console.error(err));
-
-  // ===== Função para carregar páginas =====
   function carregarPagina(pagina) {
     fetch(`./pages/${pagina}`)
       .then(res => {
@@ -47,15 +41,33 @@ window.addEventListener("DOMContentLoaded", () => {
       })
       .then(data => {
         const conteudo = document.getElementById("conteudo");
-        if (conteudo) conteudo.innerHTML = data;
+        if (conteudo) {
+          conteudo.innerHTML = data;
+
+          initCarousel();
+        }
       })
       .catch(err => console.error(err));
   }
-
-  // ===== Carrega HOME por padrão =====
   carregarPagina("home.html");
   window.carregarPagina = carregarPagina;
+
+  function initCarousel() {
+    if (carouselInterval) {
+      clearInterval(carouselInterval);
+      carouselInterval = null;
+    }
+    const imgs = Array.from(document.querySelectorAll(".carousel img"));
+    if (!imgs || imgs.length === 0) {
+      return;
+    }
+    imgs.forEach(img => img.classList.remove("active"));
+    let idx = 0;
+    imgs[idx].classList.add("active");
+    carouselInterval = setInterval(() => {
+      imgs[idx].classList.remove("active");
+      idx = (idx + 1) % imgs.length;
+      imgs[idx].classList.add("active");
+    }, 3000);
+  }
 });
-
-
-

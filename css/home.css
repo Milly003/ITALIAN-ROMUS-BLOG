@@ -3,12 +3,12 @@
   position: relative;
   width: 100%;
   height: 70vh;
-  background: url("../imagens/restaurante.home.jpg") center/cover no-repeat; 
+  background: url("/imagens/italia.vista.home.webp") center/cover no-repeat; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(214, 167, 102);
+  color: rgb(77, 59, 43);
   text-align: center;
   filter: brightness(95%);
 }
@@ -22,6 +22,14 @@
 
 .banner-home p {
   font-size: 18px;
+}
+
+.hero-text {
+  background: rgba(228, 228, 228, 0.55);
+  padding: 25px 45px;
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+  display: inline-block;
 }
 
 /* ======= CONTEÚDO PRINCIPAL ======= */
@@ -118,20 +126,38 @@ section {
   min-height: 300px;
 }
 
-/* ======= BOTÃO ======= */
-.botao {
-  display: inline-block;
-  background-color: #3b2f2f;
-  color: #f0d28c;
-  padding: 8px 16px;
-  margin-top: 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+.opcoes_card,
+.opcoes_vinh,
+.opcoes_expe {
+  display: flex;
+  flex-direction: column;   
+  justify-content: flex-start;
+  min-height: 300px;        
 }
 
-.botao:hover {
-  background-color: #f0d28c;
-  color: #3b2f2f;
+.opcoes_card img,
+.opcoes_vinh img,
+.opcoes_expe img {
+  flex: 0 0 auto;
+}
+
+.conteudo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  flex: 1 1 auto;
+  padding: 20px;
+  gap: 12px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.conteudo-card .botao {
+  align-self: center;    
+  margin-top: 12px;      
+  display: inline-block; 
+}
+
+.opcoes {
+  align-items: stretch;
 }

@@ -13,12 +13,19 @@ footer div {
   margin: 10px;
 }
 
-footer .redes img {
-  width: 28px;
+footer .redes .icon svg {
+  width: 30px;
+  height: 30px;
+  fill: #1f1d19; 
   margin: 0 6px;
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
-footer .redes img:hover {
-  transform: scale(1.2);
+footer .redes .icon:hover svg {
+  fill: #ffffff; 
+  transform: scale(1.15);
 }
+
+footer {
+  display: flex;
+  align-items: center;}
