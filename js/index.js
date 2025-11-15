@@ -12,7 +12,7 @@ fetch("/components/footer.html")
 // carrega o imagens.html
 fetch("/components/imagens.html")
     .then(response => response.text())
-    .then(data => document.head.insertAdjacentHTML("beforeend", data));
+    .then(data => document.body.insertAdjacentHTML("beforeend", data));
 
 // ===== Função para carregar páginas =====
 function carregarPagina(pagina) {
@@ -30,4 +30,5 @@ function carregarPagina(pagina) {
 // ===== Carrega HOME por padrão =====
 window.addEventListener("DOMContentLoaded", () => {
   carregarPagina("home.html");
+
 });
